@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f0c;
+    color: #ffffff;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #0f1a14;
+    padding: 20px;
+    border-bottom: 2px solid #1f3b2c;
+}
+
+.header h1{
+    margin: 0;
+}
+
+.header p{
+    margin: 5px 0 0;
+    color: #b5b5b5;
+}
+
+.header nav a{
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.header nav a:hover{
+    color: #2ecc71;
+}
+
+.about-container{
+    text-align: center;
+    padding: 20px;
+}
+
+.about-container img{
+    border-radius: 50%;
+    border: 3px solid #2ecc71;
+    margin-bottom: 10px;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.about-container p{
+    max-width: 600px;
+    margin: auto;
+    color: #dcdcdc;
+}
+
+.projects{
+    padding: 20px;
+}
+
+.project-grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.card{
+    background: #121a16;
+    border: 1px solid #1f3b2c;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rotate-left {
+  transform: rotate(-180deg);
+}
+
+.card:hover{
+    transform: scale(1.05);
+    border-color: #2ecc71;
+}
+
+.skills{
+    padding: 20px;
+    text-align: center;
+}
+
+.skills ul{
+    list-style: none;
+    padding: 0;
+}
+
+.skills li{
+    display: inline-block;
+    background: #121a16;
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px solid #1f3b2c;
+    transition: background 0.3s;
+}
+
+.contact a{
+    color: #2ecc71;
+}
+
+form input, form textarea{
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background: #121a16;
+    border: 1px solid #1f3b2c;
+    color: white;
+}
+
+form imput:focus, form textarea:focus{
+    outline: none;
+    border-color: #2ecc71;
+}
+
+button{
+    padding: 10px 20px;
+    background: #2ecc71;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+button:hover{
+    background: #1f3b2c;
+    color: white;
+}
+
+@media (min-width: 768px){
+    .project-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px){
+    .header{
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+
+    .header nav{
+        text-align: center;
+    }
+
+    .project-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
